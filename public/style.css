@@ -1,0 +1,75 @@
+* {
+    text-align: right;
+}
+
+.title {
+    text-align: center;
+    margin: auto 0;
+}
+
+main {
+    padding-top: 10px;
+    width: 40%;
+margin: auto;
+text-align: right;
+}
+
+input {
+    text-align: right;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.btn-group {
+    width:  100%;
+}
+
+.warning{
+    text-decoration: underline;
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.loading {
+    text-align: center;
+    margin: auto 0;
+    width: 100%;
+}
+
+.card {
+    width: 18rem;
+    margin: 10px;
+    direction: rtl;
+}
+
+.btn-group{
+    direction: ltr;
+}
+
+
+.card-edit-mode {
+    object-fit: contain;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 900px) {
+    main {
+        width: 90% !important;
+    }
+
+    .card {
+        width: initial !important;
+    }
+}
