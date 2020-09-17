@@ -90,7 +90,7 @@ addItemForm.addEventListener('submit', (event) => {
     location,
   };
 
-  fetch(API_URL, {
+  fetch('/items', {
     method: 'POST',
     body: JSON.stringify(item),
     headers: {
@@ -136,7 +136,7 @@ function listAllItems(query) {
 
   let appendThis = '/'.concat(query);
 
-  fetch(API_URL.concat(appendThis))
+  fetch('/items'.concat(appendThis))
     .then((res) => res.json())
     .then((items) => {
       console.log(items);
@@ -215,7 +215,7 @@ modalForm.addEventListener('submit', (event) => {
 
   console.log(update);
 
-  fetch(API_URL_UPDATE, {
+  fetch('/update', {
     method: 'POST',
     body: JSON.stringify(update),
     headers: {
