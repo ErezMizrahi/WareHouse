@@ -1,10 +1,10 @@
-const PORT = process.env.PORT || 5500;
-const url = `http://localhost:${PORT}`;
+// const PORT = process.env.PORT || 5500;
+// const url = `http://localhost:${PORT}`;
 
-const API_URL = url + '/items';
-const API_URL_SEARCH = url + '/searchItems';
-const API_URL_EXCEL = url + '/excel';
-const API_URL_UPDATE = url + '/update';
+// const API_URL = url + '/items';
+// const API_URL_SEARCH = url + '/searchItems';
+// const API_URL_EXCEL = url + '/excel';
+// const API_URL_UPDATE = url + '/update';
 
 // const API_URL =
 //   window.location.href == 'localhost'
