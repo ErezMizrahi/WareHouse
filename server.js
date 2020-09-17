@@ -7,6 +7,9 @@ var XLSX = require('xlsx');
 var path = require('path'); //used for file path
 var fs = require('fs'); //used for file path
 // const multer = require('multer');
+
+const PORT = process.env.PORT || 5500;
+
 const app = express();
 
 var multer = require('multer');
@@ -116,11 +119,9 @@ app.post('/update', (req, res) => {
   });
 });
 
-const port = 5500;
-
 //start at port
-app.listen(port, () => {
-  console.log(`lisiting on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`lisiting on port ${PORT}`);
 });
 
 //data validation
