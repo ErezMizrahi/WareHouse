@@ -1,33 +1,3 @@
-// const PORT = process.env.PORT || 5500;
-// const url = `http://localhost:${PORT}`;
-
-// const API_URL = url + '/items';
-// const API_URL_SEARCH = url + '/searchItems';
-// const API_URL_EXCEL = url + '/excel';
-// const API_URL_UPDATE = url + '/update';
-
-// const API_URL =
-//   window.location.href == 'localhost'
-//     ? 'http://localhost:5500/items'
-//     : 'https://itamar-locks.vercel.app/items';
-// const API_URL_SEARCH =
-//   window.location.href == 'localhost'
-//     ? 'http://localhost:5500/searchItems'
-//     : 'https://itamar-locks.vercel.app/searchItems';
-// const API_URL_EXCEL =
-//   window.location.href == 'localhost'
-//     ? 'http://localhost:5500/excel'
-//     : 'https://itamar-locks.vercel.app/excel';
-// const API_URL_UPDATE =
-//   window.location.href == 'localhost'
-//     ? 'http://localhost:5500/update/'
-//     : 'https://itamar-locks.vercel.app/update';
-
-// const API_URL = "http://localhost:5500/items"
-// const API_URL_SEARCH = "http://localhost:5500/searchItems"
-// const API_URL_EXCEL = "http://localhost:5500/excel"
-// const API_URL_UPDATE = "http://localhost:5500/update/"
-
 //button group action
 const addActionOption = document.querySelector('#addItem');
 const excelActionOption = document.querySelector('#uploadExcelToServer');
@@ -120,6 +90,9 @@ function search(event, changedQuery) {
   const formData = new FormData(searchForm);
   var query = formData.get('search');
   if (changedQuery !== '' && changedQuery !== undefined) query = changedQuery;
+  if (query === '*') {
+    listAllItems('');
+  }
   if (query === '') {
     const p = document.createElement('p');
     p.textContent = 'אנא הזן טקסט לחיפוש';
